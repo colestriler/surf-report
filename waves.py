@@ -6,8 +6,8 @@ import numpy as np
 import re
 import requests
 
-""" I made this project to learn web scraping. This is my first time using BeautifulSoup and I plan on optimizing
-my code and I continue to learn the software."""
+""" I made this project to learn web scraping. This is my first time learning BeautifulSoup and I plan on optimizing
+my code as I continue to learn the software."""
 
 tmp_url = "https://www.surfline.com/surf-report/terra-mar-point/5842041f4e65fad6a77088a6"
 oside_pier_south_url = "https://www.surfline.com/surf-report/oceanside-pier-southside/584204204e65fad6a7709435"

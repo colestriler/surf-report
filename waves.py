@@ -6,7 +6,7 @@ import numpy as np
 import re
 import requests
 
-""" I made this project to learn web scraping. This is my first time learning BeautifulSoup and I plan on optimizing
+""" I made this project to learn web scraping. This is my first project using BeautifulSoup and I plan on optimizing
 my code as I continue to learn the software."""
 
 tmp_url = "https://www.surfline.com/surf-report/terra-mar-point/5842041f4e65fad6a77088a6"
@@ -89,23 +89,17 @@ class Report:
         report['wind'] = wind
         self.waves = report
         # return the DataFrame
-        return report
-    
-    # variables
-
-    
+        return report   
     
     def best(self):
         if self.waves.size == 0:
             return "Need to run .report_surf() first."
-            
         if len(self.waves[self.waves['condition'] == 'fair']) > 0:
             # converts wind collumn to integers
             report['wind'] = np.array([int(re.findall(pattern, i)[0]) for i in report['wind']])
             # best location has lowest wind
             best_location = self.waves.sort_values('wind', ascending=True).iloc[0,0]
             return f"The best location is {best_location}."
-            
         else:
             return "There is no good surf today."
            
